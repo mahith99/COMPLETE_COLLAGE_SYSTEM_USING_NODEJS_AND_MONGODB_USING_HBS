@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form - Amrita</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <style>
+    body {font-family: "Raleway", Arial, sans-serif}
+    .w3-row img {margin-bottom: -8px}
+    </style>
+
+</head>
+
+<body>
+   
+
+    <div class="w3-content" style="max-width:1500px">
+        <header class="w3-container w3-xlarge w3-padding-24" style="background-color: #a4123f;">
+            <img src="css/images/logo2.png" style="max-width: 15%; height: auto;">
+            <a href="/" class="w3-right w3-button" style="background-color: #a4123f; color: #fdfdfd;">HOME</a>
+            <a href="/log" class="w3-right w3-button" style="background-color: #a4123f; color: #fdfdfd;">LOGIN</a>
+          </header>
+            <div class="w3-row">
+    
+                <img src="css/images/img2.jpg" style="width:100%">
+                  
+              </div>
+        <footer class="w3-light-grey w3-padding-64 w3-center">
+             {{#if message}}
+    <div style="text-align: center" class="alert alert-{{message.type}}">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>{{message.intro}}</strong> {{message.message}}
+    </div>
+
+    {{/if}}
+            <div class="row">
+                <div class="col-md-3">
+    
+                </div>
+                <div class="col-md-6 main">
+                    <form action="/sign_up" method="POST">
+                        <h2>STUDENT REGISTRATION</h2>
+                        <input type="text" class="box" id="name" name="name" placeholder="Name" required />
+                        <br>
+                        <input type="text" class="box" id="email" name="email" placeholder="Email" required />
+                        <br>
+                        <input type="text" class="box" id="rno" name="rno" placeholder="Roll No" required />
+                        <br>
+                        <input type="password" class="box" id="password" name="password" placeholder="Password" required />
+                        <br>
+                        <input type="submit" value="Submit" id="submit" />
+                    </form>
+                </div>
+                <div class="col-md-3">
+                </div>
+            </div>
+            <br>
+  <p> <a href="/"  class="w3-hover-text-green">RETURN TO HOME</a></p>
+        </footer>
+    </div>
+        
+</body>
+
+</html>
